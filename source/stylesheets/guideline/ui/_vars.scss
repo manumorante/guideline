@@ -1,0 +1,47 @@
+// Style Guide vars
+
+// Basics
+$sg-color-light: #fff; // White
+$sg-color-dark:  #000; // Black
+
+// General Brand Color
+$sg-color-brand: #02b053;
+
+// Primary
+$sg-color-primary: #02b053;
+
+// Secondary
+$sg-color-secondary: #2babda;
+
+$sg-font-family: 'LatoLatin', 'Lato', Arial, sans-serif;
+
+$sg-font-size-base: 12px;
+$sg-font-size-lg: 14px;
+$sg-font-size-sm: 10px;
+$sg-font-size-xs: 8px;
+
+// Container width
+$sg-container-xs-width: 480px;    // Extra Small devices
+$sg-container-sm-width: 768px;    // Small devices
+$sg-container-md-width: 973px;    // Medium devices
+$sg-container-lg-width: 1216p;   // Large devices
+
+$sg-margin-normal: 16px;
+
+// Spacings
+$sg-margin-smallest: 5px;
+$sg-margin-small:    8px;
+$sg-margin-normal:   16px;
+$sg-margin-big:      24px;
+$sg-margin-bigger:   32px;
+$sg-margin-biggest:  48px;
+
+
+// Grey (for background and general)
+$sg-color-grey-lighter:  #ebeef3;
+$sg-color-grey-light:    #bdc1c6;
+$sg-color-grey:          #9b9b9b;
+$sg-color-grey-dark:     #5a5e64;
+$sg-color-grey-darkest:  #262d34;
+
+$sg-border-radius: 5px;

@@ -1,0 +1,55 @@
+// ***************************************************************
+// site-1 Brand Vars
+// Use this file to define just one time the vars for the brand.
+// ***************************************************************
+
+// Basics
+$color-light: #fff; // White
+$color-dark:  #000; // Black
+
+// General Brand Color
+$color-brand: #2babda;
+
+// Primary
+$color-primary-light:   #04be5b;
+$color-primary:         #02b053;
+$color-primary-dark:    #10974f;
+$color-primary-darkest: #028f43;
+
+// Secondary
+$color-secondary-light:   #4bbde7;
+$color-secondary:         $color-brand;
+$color-secondary-dark:    #2c9dc7;
+$color-secondary-darkest: #2f7893;
+
+// Success
+$color-success: $color-primary;
+
+// Info
+$color-info: $color-secondary;
+
+// Warning
+$color-warning: #ff9948;
+
+// Error
+$color-danger: #d93b59;
+$color-error: $color-danger;
+
+// Grey (for background and general)
+$color-grey-lighter:  #ebeef3;
+$color-grey-light:    #bdc1c6;
+$color-grey:          #9b9b9b;
+$color-grey-dark:     #5a5e64;
+$color-grey-darkest:  #262d34;
+
+// Alpha dark/light (modal window background)
+$alpha-dark: rgba(0, 0, 0, .5);
+$alpha-light: rgba(255, 255, 255, .5);
+
+// Spacings
+$margin-smallest: 5px;
+$margin-small:    8px;
+$margin-normal:   16px;
+$margin-big:      24px;
+$margin-bigger:   32px;
+$margin-biggest:  48px;

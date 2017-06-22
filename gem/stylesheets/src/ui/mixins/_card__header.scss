@@ -1,0 +1,24 @@
+// Card Header
+
+$card-header-margin: -$margin-normal (-$margin-normal) $margin-normal !default;
+$card-header-padding: $margin-normal !default;
+$card-header-color: $color-light !default;
+$card-header-background-color: $color-secondary !default;
+$card-header-border-radius: $border-radius $border-radius 0 0 !default;
+
+@mixin card-header(
+  $margin: $card-header-margin,
+  $padding: $card-header-padding,
+  $color: $card-header-color,
+  $background-color: $card-header-background-color,
+  $border-radius: $card-header-border-radius) {
+
+  margin: $margin;
+  padding: $padding;
+
+  color: $color;
+  background-color: $background-color;
+  overflow: hidden;
+
+  @include border-radius($border-radius);
+}

@@ -1,0 +1,93 @@
+// Icons
+
+.icon {
+  @include icon;
+}
+
+// Icons list
+$icon-list: ();
+
+
+// Close and Check
+$icon-close:              close close-grey-dark !default;
+$icon-close-alternative:  close-alternative close-white !default;
+$icon-check:              check check-grey !default;
+$icon-check-primary:      check-primary success !default;
+
+$icon-list: join($icon-list, $icon-close $icon-close-alternative $icon-check $icon-check-primary);
+
+
+// Notifications
+$icon-info:     info !default;
+$icon-warning:  warning !default;
+$icon-danger:   danger !default;
+
+$icon-list: join($icon-list, $icon-info $icon-warning $icon-danger);
+
+
+// Arrows
+$icon-arrow-up:     arrow-up !default;
+$icon-arrow-right:  arrow-right !default;
+$icon-arrow-down:   arrow-down !default;
+$icon-arrow-left:   arrow-left !default;
+
+$icon-list: join($icon-list, $icon-arrow-up $icon-arrow-right $icon-arrow-down $icon-arrow-left);
+
+// Arrows Circle
+$icon-arrow-circle-up:    arrow-circle-up !default;
+$icon-arrow-circle-right: arrow-circle-right !default;
+$icon-arrow-circle-down:  arrow-circle-down !default;
+$icon-arrow-circle-left:  arrow-circle-left !default;
+
+$icon-list: join($icon-list, $icon-arrow-circle-up $icon-arrow-circle-right $icon-arrow-circle-down $icon-arrow-circle-left);
+
+
+// Watch
+$icon-watch:        watch !default;
+$icon-watch-light:  watch-light !default;
+$icon-watch-dark:   watch-dark !default;
+
+$icon-list: join($icon-list, $icon-watch $icon-watch-light $icon-watch-dark);
+
+
+// Live Streaming
+$icon-live-streaming:             live-streaming !default;
+$icon-live-streaming-dark:        live-streaming-dark !default;
+$icon-live-streaming-light:       live-streaming-light !default;
+$icon-live-streaming-alternative: live-streaming-alternative !default;
+
+$icon-list: join($icon-list, $icon-live-streaming $icon-live-streaming-alternative $icon-live-streaming-dark $icon-live-streaming-light);
+
+
+$icon-video-player-popup-light:       video-player-popup-light !default;
+$icon-video-player-popup-alternative: video-player-popup-alternative !default;
+
+$icon-list: join($icon-list, $icon-video-player-popup-alternative $icon-video-player-popup-light);
+
+
+// Sport & Cash Out
+$generic-sports: generic-sports !default;
+$generic-sports-dark: generic-sports-dark generic-sports-black !default;
+$generic-sports-light: generic-sports-light generic-sports-white !default;
+$best-odds-guaranteed: best-odds-guaranteed !default;
+$cashout: cashout !default;
+$cashout-dark: cashout-dark cashout-black !default;
+$cashout-light: cashout-light cashout-white !default;
+$cashout-inverted: cashout-inverted cashout-inverted !default;
+
+$icon-list: join($icon-list, $generic-sports $generic-sports-dark $generic-sports-light $best-odds-guaranteed $cashout $cashout-dark $cashout-light $cashout-inverted);
+
+
+// Betslip
+$betslip: betslip !default;
+$betslip-dark: betslip-dark betslip-black !default;
+$betslip-light: betslip-light betslip-white !default;
+$betslip-inverted: betslip-inverted betslip-inverted !default;
+
+$icon-list: join($icon-list, $betslip $betslip-dark $betslip-light $betslip-inverted);
+
+
+// Create CSS selectors
+@each $icon in $icon-list {
+  @include make-icon($icon);
+}

@@ -1,0 +1,21 @@
+// - Overlay
+
+// https://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
+
+$overlay-bg-color: #000 !default;
+$overlay-opacity: .6 !default;
+$overlay-z-index: 200 !default;
+
+@mixin overlay(
+  $bg-color: $overlay-bg-color,
+  $opacity: $overlay-opacity,
+  $z-index: $overlay-z-index) {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: $z-index;
+  background-color: rgba($bg-color, $opacity);
+}

@@ -1,0 +1,25 @@
+// Headers
+
+$headers: true !default;
+
+@if ($headers) {
+
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    display: block;
+    margin: 0 0 $margin-normal;
+    font-weight: bold;
+  }
+
+  .h1 { @include font-size($font-size-h1); }
+  .h2 { @include font-size($font-size-h2); }
+  .h3 { @include font-size($font-size-h3); }
+  .h4 { @include font-size($font-size-h4); }
+  .h5 { @include font-size($font-size-h5); }
+  .h6 { @include font-size($font-size-h6); }
+
+}

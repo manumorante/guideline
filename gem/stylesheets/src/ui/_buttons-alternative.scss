@@ -1,0 +1,37 @@
+// Buttons Alternative
+//
+// Use <button class="button-alternative is-default"></button>
+
+.button-alternative {
+  @include button;
+
+  // Alternative - Default
+  &.is-default {
+    @include button-variant($button-alternative-default-color, transparent, $color-grey-light);
+  }
+
+  // Alternative - Primary
+  &.is-primary {
+    @include button-variant($button-alternative-primary-color, transparent, $color-primary);
+  }
+
+  // Alternative - Secondary
+  &.is-secondary {
+    @include button-variant($button-alternative-secondary-color, transparent, $color-secondary);
+  }
+
+  // Alternative - Info
+  &.is-info {
+    @include button-variant($button-alternative-info-color, transparent, $color-secondary);
+  }
+
+  // Warning
+  &.is-warning {
+    @include button-variant($button-alternative-warning-color, transparent, $color-warning);
+  }
+
+  // Danger
+  &.is-danger {
+    @include button-variant($button-alternative-danger-color, transparent, $color-danger);
+  }
+}

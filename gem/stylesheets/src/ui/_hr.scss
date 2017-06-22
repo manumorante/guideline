@@ -1,0 +1,11 @@
+// HR tag
+
+$hr: true !default;
+
+@if($hr) {
+
+  .hr {
+    @include hr;
+  }
+
+}

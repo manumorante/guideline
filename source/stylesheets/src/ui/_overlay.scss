@@ -1,0 +1,11 @@
+// - Overlay
+
+$overlay: true !default;
+
+@if ($overlay) {
+
+  .overlay {
+    @include overlay;
+  }
+
+}

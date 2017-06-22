@@ -1,0 +1,69 @@
+// Button Card
+//
+// Use <button class="button-card"></button>
+
+$button-card-color: $color-grey-dark !default;
+$button-card-bg-color: $color-light !default;
+$button-card-color-active: $color-light !default;
+$button-card-bg-active: $color-secondary !default;
+$button-card-height: 30px !default;
+$button-card-padding: $margin-small !default;
+$button-card-margin-bottom: $margin-normal !default;
+$button-card-border-radius: $border-radius !default;
+$button-card-opacity: $opacity !default;
+
+@mixin button-card(
+  $color: $button-card-color,
+  $bg-color: $button-card-bg-color,
+  $color-active: $button-card-color-active,
+  $bg-active: $button-card-bg-active,
+  $height: $button-card-height,
+  $padding: $button-card-padding,
+  $border-radius: $button-card-border-radius,
+  $opacity: $button-card-opacity) {
+
+  width: auto;
+  height: auto;
+  min-height: $height;
+
+  margin-bottom: $button-card-margin-bottom;
+  padding: $padding;
+  vertical-align: top;
+
+  color: $color;
+  background-color: $bg-color;
+  overflow: hidden;
+  border: 0;
+
+  font-size: $font-size-base;
+  text-align: left;
+  line-height: 16px;
+  outline: 0;
+
+  @include border-radius($border-radius);
+  @include box-shadow;
+  @include border-box;
+
+  @include hover {
+    cursor: pointer;
+  }
+
+  // Disabled
+  &.disabled,
+  &.multiline.disabled {
+    pointer-events: none;
+    opacity: $opacity;
+    cursor: default;
+  }
+
+  // Active
+  &.active,
+  &.multiline.active {
+    background-color: $bg-active;
+    color: $color-active;
+
+    strong {
+      color: $color-active;
+    }
+  }
+}

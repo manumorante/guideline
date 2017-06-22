@@ -1,0 +1,10 @@
+// Center
+
+@mixin center ($margin: $margin-normal) {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  max-height: calc(100% - #{double($margin)});
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,24 @@
+// Tables
+//
+// Table styling for table tag or any element with the same behaviour
+//
+// Use
+//   <table class="table">
+//     <tr>
+//       <td class="cell"></td>
+//       <td class="cell"></td>
+//     </tr>
+//   </table>
+// Or
+//   <div class="table">
+//     <div class="cell"></div>
+//     <div class="cell"></div>
+//   </div>
+
+.table {
+  @include table;
+}
+
+.cell {
+  @include cell;
+}

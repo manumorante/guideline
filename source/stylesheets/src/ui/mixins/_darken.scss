@@ -1,0 +1,9 @@
+// Darken
+
+@function darken($color, $amount) {
+  @if ($config-backward) {
+    @return $color;
+  } @else {
+    @return darken($color, $amount);
+  }
+}

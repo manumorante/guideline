@@ -1,0 +1,13 @@
+// Footer Navigation
+
+$footer-nav-margin: $margin-bigger 0 $margin-normal !default;
+$footer-nav-padding: 0 0 $margin-normal !default;
+$footer-nav-text-align: center !default;
+
+.footer-nav {
+  display: block;
+  width: auto;
+  margin: $footer-nav-margin;
+  padding: $footer-nav-padding;
+  text-align: $footer-nav-text-align;
+}

@@ -1,0 +1,70 @@
+// Forms
+//
+// 1. Remove margin to last item
+
+$form-control-height: 40px !default;
+$form-select-width: 190px !default;
+$form-select-image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAMAAAA/D5+aAAAAP1BMVEUAAABaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmRaXmTfIVVoAAAAFHRSTlMADwbv9bCNIeW+nhjZz+jeqn9VMTPpZ2oAAABgSURBVBjTfclXDsAgDANQdumgM/c/a4MoslRL5COW/czonnA6GlO49XuR8rdFRDSixuxIDk23wSDeGhgJrEvSEtbebNYaWWAssCbSBLZXu6pM3wTzukLYIGxN2EqGDO8FdxIHTNpOFRYAAAAASUVORK5CYII=' !default; // TODO
+
+@mixin form {
+  margin: 0 0 $margin-normal;
+  padding: 0;
+
+  > :last-child {
+    margin-bottom: 0; // 1
+  }
+
+  // Fieldset
+  fieldset {
+    margin: 0 0 $margin-normal;
+    padding: 0;
+    border: 0;
+
+    :last-child {
+      margin-bottom: 0; // 1
+    }
+  }
+}
+
+// Form items
+@mixin form-group {
+  display: block;
+  margin-bottom: $margin-normal;
+}
+
+// Control
+@mixin form-control {
+  @include border-box;
+  @include reset-inputs;
+
+  height: $form-control-height;
+  min-width: 114px;
+  padding: 12px 10px;
+
+  font-family: $font-family;
+  @include font-size($font-size-base);
+  color: $color-grey-dark;
+
+  background-color: transparent;
+  border: 0;
+
+  @include at-medium {
+    border: 1px solid $color-grey-dark;
+  }
+}
+
+// Select item form
+@mixin form-select (
+  $width: $form-select-width,
+  $image: $form-select-image) {
+
+  $position: calc(100% - 10px) 50%;
+
+  width: $width;
+  padding-right: 13px;
+
+  background: transparent url($image) no-repeat $position;
+  background-size: 13px 8px;
+
+  &::-ms-expand { display: none; } // IE 11
+}

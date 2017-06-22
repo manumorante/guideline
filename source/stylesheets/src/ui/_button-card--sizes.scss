@@ -1,0 +1,40 @@
+// Button Card - Sizes
+//
+// Use <button class="button-card is-small">Button</button>
+
+.button-card {
+
+  // Small
+  &.is-small,
+  &.multiline.is-small {
+    padding: 5px 6px;
+    font-size: $font-size-xs;
+    line-height: 10px;
+
+    strong {
+      font-size: $font-size-sm + 1;
+      line-height: 10px;
+    }
+  }
+
+  &.multiline.is-small .icon {
+    margin-top: -12px;
+  }
+
+  // Large
+  &.is-large,
+  &.multiline.is-large {
+    padding: 14px 16px;
+    font-size: $font-size-h4;
+    line-height: 18px;
+
+    strong {
+      font-size: $font-size-h4 + 1;
+      line-height: 18px;
+    }
+  }
+
+  &.multiline.is-large .icon {
+    margin-top: -20px;
+  }
+}

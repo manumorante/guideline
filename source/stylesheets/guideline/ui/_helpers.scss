@@ -1,0 +1,14 @@
+// Helpers
+
+// scss-lint:disable ImportantRule
+
+// Border color to see a light color
+.border-grey {
+  border: 1px solid $sg-color-grey-lighter !important;
+}
+
+// Background color grey
+.bg-grey {
+  background-color: $sg-color-grey-lighter;
+}
+

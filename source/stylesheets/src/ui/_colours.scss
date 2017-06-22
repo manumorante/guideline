@@ -1,0 +1,22 @@
+// Colours helpers
+
+// Primary
+@include make-color-helper(primary-light, $color-primary-light);
+@include make-color-helper(primary, $color-primary);
+@include make-color-helper(primary-dark, $color-primary-dark);
+@include make-color-helper(primary-darkest, $color-primary-darkest);
+
+// Secondary
+@include make-color-helper(secondary-light, $color-secondary-light);
+@include make-color-helper(secondary, $color-secondary);
+@include make-color-helper(secondary-dark, $color-secondary-dark);
+@include make-color-helper(secondary-darkest, $color-secondary-darkest);
+
+// Info, Warning & Danger
+@include make-color-helper(info, $color-info);
+@include make-color-helper(warning, $color-warning);
+@include make-color-helper(danger, $color-danger);
+
+// Basic
+@include make-color-helper(light, $color-light);
+@include make-color-helper(dark, $color-dark);

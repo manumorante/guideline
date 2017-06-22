@@ -1,0 +1,56 @@
+// List Links
+
+$list-links: true !default;
+
+@if ($list-links) {
+
+  $list-links-icon-size: $icon-size !default;
+  $list-links-padding: $margin-normal 0 !default;
+  $list-links-border-width: 1px !default;
+  $list-links-border-color: $color-grey-light !default;
+
+  .list-links {
+    ol,
+    ul {
+      @include reset-list;
+    }
+
+    li {
+      border-top: $list-links-border-width solid $list-links-border-color;
+    }
+
+    a,
+    a:hover,
+    a:active,
+    a:focus {
+      position: relative;
+      display: block;
+      margin: $list-links-padding;
+      padding-right: $list-links-icon-size;
+      text-transform: none;
+      text-decoration: none;
+    }
+
+    li:first-child {
+      border-top: 0;
+
+      a {
+        margin-top: 0;
+      }
+    }
+
+    li:last-child a {
+      margin-bottom: 0;
+    }
+  }
+
+  // Arrow icon
+  .list-links a::after {
+    @include icon($position: absolute, $margin: half(-$list-links-icon-size) 0 0);
+    top: 50%;
+    right: 0;
+
+    background-image: image-url('arrow-right.png');
+  }
+
+}

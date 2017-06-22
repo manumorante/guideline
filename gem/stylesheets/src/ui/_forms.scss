@@ -1,0 +1,28 @@
+// Forms
+//
+// Use <form class="form">[...]</form>
+
+$form: true !default;
+
+@if ($form) {
+
+  .form {
+    @include form;
+  }
+
+  // Form items
+  .form-group {
+    @include form-group;
+  }
+
+  .form-control {
+    @include form-control;
+  }
+
+  // Select item form
+  // scss-lint:disable QualifyingElement
+  select.form-control {
+    @include form-select;
+  }
+
+}

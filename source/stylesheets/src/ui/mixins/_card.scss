@@ -1,0 +1,50 @@
+// Card
+
+$card-padding: $margin-normal !default;
+$card-margin-bottom: $margin-normal !default;
+$card-color: $color-grey-dark !default;
+$card-bg-color: $color-light !default;
+$card-border-radius: $border-radius !default;
+
+@mixin card(
+  $padding: $card-padding,
+  $margin-bottom: $card-margin-bottom,
+  $bg-color: $card-bg-color,
+  $color: $card-color,
+  $border-radius: $card-border-radius) {
+
+  width: auto;
+  height: auto;
+
+  margin-bottom: $margin-bottom;
+  padding: $padding;
+  vertical-align: top;
+
+  color: $color;
+  background-color: $bg-color;
+  overflow: hidden;
+  border: 0;
+
+  border-radius: $border-radius;
+  @include box-shadow;
+  @include border-box;
+
+  // Remove margin to last element
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  // Alignment
+  &.is-center {
+    text-align: center;
+  }
+
+  &.is-left {
+    text-align: left;
+  }
+
+  &.is-right {
+    text-align: right;
+  }
+
+}

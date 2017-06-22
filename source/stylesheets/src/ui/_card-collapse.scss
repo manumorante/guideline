@@ -1,0 +1,64 @@
+// Cards Collapse
+// @extends .cards
+//
+// You can use to create:
+// - Accordions.
+// - Title-cards with expandable content.
+// - Card with normal content and expandable.
+//
+// 1. Use the class '.is-expanded' to expand the card's content.
+// 2. You can use the class '.collapse-button' to apply the position/animation to your expand element.
+//
+// Use
+// <div class="card card--collapse">
+//  <span class="js-collapse-button icon is-arrow-circle-up"></span>
+//  <div class="card-content"><h3>Title</h3></div>
+//  <div class="card-collapse">Expandable content</div>
+// </div>
+
+$card--collapse: true !default;
+
+@if($card--collapse) {
+
+  .card.card--collapse {
+    position: relative;
+
+    .card-content > :last-child { margin-bottom: 0; }
+
+    // Collapse/Expand content
+    .card-collapse {
+      display: none;
+
+      > :last-child { margin-bottom: 0; }
+    }
+
+    &.is-expanded {
+      .card-content {
+        margin-bottom: $margin-normal;
+      }
+
+      .card-collapse { // 1
+        display: block;
+      }
+    }
+  }
+
+
+  //
+  // Expand/Collapse button
+  .card.card--collapse {
+    .collapse-button { // 2
+      position: absolute;
+      top: $margin-normal;
+      right: $margin-normal;
+
+      @include prefix(transition, transform .4s);
+      @include prefix(transform, rotate(180deg));
+    }
+
+    &.is-expanded .collapse-button {
+      @include prefix(transform, rotate(0deg));
+    }
+  }
+
+}

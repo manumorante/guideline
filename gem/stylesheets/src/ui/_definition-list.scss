@@ -1,0 +1,22 @@
+// Description List
+//
+// Use
+// <dl class="d-list">
+//   <dt>Term</dt>
+//   <dd>Description</dd>
+// </dl>
+
+$d-list-margin-bottom: $margin-normal !default;
+$d-list-padding-right: $margin-normal !default;
+
+.d-list {
+  @include reset-d-list($margin: 0 0 $d-list-margin-bottom);
+  display: table;
+  width: 100%;
+
+  dt,
+  dd {
+    display: table-cell;
+    padding-right: $d-list-padding-right;
+  }
+}

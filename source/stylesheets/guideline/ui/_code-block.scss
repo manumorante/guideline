@@ -1,0 +1,37 @@
+// Guide Style Code Block
+
+.code-block {
+  position: relative;
+  z-index: 2;
+
+  margin-right: -$sg-margin-normal;
+  margin-bottom: $sg-margin-normal;
+  margin-left: -$sg-margin-normal;
+  padding: $sg-margin-normal;
+
+  border: 1px solid $sg-color-grey-lighter;
+  overflow: hidden;
+  background-color: lighten($sg-color-grey-lighter, 3%);
+
+  font-size: 16px;
+  line-height: 22px;
+
+  @include at-medium {
+    @include border-radius(0 0 $sg-border-radius $sg-border-radius);
+  }
+
+
+  // Code Tag
+  code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+// Move to cover borders in the example block
+.example + .code-block {
+  margin-top: -($sg-margin-normal + $sg-border-radius);
+}

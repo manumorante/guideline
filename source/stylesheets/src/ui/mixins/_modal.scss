@@ -1,0 +1,81 @@
+// - Modal
+
+$modal-max-width: 400px !default;
+$modal-margin: $margin-normal !default;
+$modal-padding: $margin-normal !default;
+$modal-border-size: 1px !default;
+$modal-border-radius: $border-radius !default;
+$modal-text-align: center !default;
+$modal-color: $color-grey-dark !default;
+$modal-bg-color: $color-light !default;
+$modal-z-index: 201 !default;
+
+@mixin modal(
+  $max-width: $modal-max-width,
+  $margin: $modal-margin,
+  $padding: $modal-padding,
+  $border-size: $modal-border-size,
+  $border-radius: $modal-border-radius,
+  $text-align: $modal-text-align,
+  $color: $modal-color,
+  $bg-color: $modal-bg-color,
+  $z-index: $modal-z-index) {
+
+  @include center;
+  z-index: $z-index;
+
+  width: calc(100% - #{double($margin-normal)});
+  height: auto;
+
+  margin: 0 0 $margin;
+  padding: $padding;
+  vertical-align: top;
+
+  color: $color;
+  background-color: $bg-color;
+  overflow: hidden;
+
+  border: $border-size solid transparent;
+  text-align: $text-align;
+  @include normalize-text;
+
+  @include border-radius($border-radius);
+  @include box-shadow;
+  @include border-box;
+
+  // Remove margin to last element
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  // Alignment
+  &.is-center {
+    text-align: center;
+  }
+
+  &.is-left {
+    text-align: left;
+  }
+
+  &.is-right {
+    text-align: right;
+  }
+
+  // Limit width in large devices
+  @include at-small {
+    max-width: $max-width;
+  }
+}
+
+@mixin make-modal($class-name, $color: $color-grey) {
+  .modal.is-#{$class-name} {
+    border-color: $color;
+
+    // Title Color
+    .modal__title {
+      font-size: $font-size-h5;
+      font-weight: $headings-font-weight;
+      color: $color;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+// StylesGuide
+
+@mixin colors (
+  $color: null,
+  $bg-color: null) {
+
+  color: $color;
+  background-color: $bg-color;
+}

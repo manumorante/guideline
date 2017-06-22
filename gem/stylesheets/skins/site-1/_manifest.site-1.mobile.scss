@@ -1,0 +1,9 @@
+// site-1 Mobile
+
+$skin: site-1 mobile;
+
+@import 'ui/vars.site-1.brand';          // Unique Brand vars
+@import '../../src/vars.styles_guide';         // default vars
+@import 'ui/vars.site-1';                // site-1 mapping vars
+@import 'ui/vars.site-1.mobile';         // site-1 Desktop vars variation
+@import '../../src/manifest.styles_guide';     // core

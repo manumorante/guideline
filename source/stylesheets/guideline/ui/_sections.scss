@@ -1,0 +1,28 @@
+// Sections
+
+.section {
+  @include border-box;
+  margin-bottom: double($sg-margin-biggest);
+}
+
+.title-section {
+  margin: 0 0 $sg-margin-normal;
+  padding-bottom: $sg-margin-normal;
+  border-bottom: 1px solid $sg-color-grey-lighter;
+  text-align: center;
+
+  @include at-medium { text-align: left; }
+}
+
+// Title
+.section > h1 {
+  margin: 0 0 $sg-margin-normal;
+  font-size: 24px;
+}
+
+// Paragraph
+.section > p {
+  margin: 0 0 $sg-margin-normal;
+  font-size: 16px;
+  line-height: 22px;
+}

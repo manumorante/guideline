@@ -1,0 +1,38 @@
+// Icons
+//
+// 1. If you need use if with :after/:before
+
+$icon-width: $icon-size !default;
+$icon-height: $icon-size !default;
+
+@mixin icon (
+  $position: relative,
+  $display: inline-block,
+  $margin: -2px 2px 0 0) {
+
+  position: $position;
+  display: $display;
+  content: ' '; // 1
+  width: $icon-width;
+  height: $icon-height;
+  margin: $margin;
+
+  vertical-align: middle;
+  font-style: normal;
+  background: transparent no-repeat center;
+  @include prefix(background-size, $icon-width $icon-height);
+}
+
+// Make icon class name and image url
+@mixin make-icon($props) {
+  $class-name: nth($props, 1);
+  $icon-url: $class-name;
+
+  @if(length($props) > 1) {
+    $icon-url: nth($props, 2);
+  }
+
+  .icon.is-#{$class-name} {
+    background-image: image-url("#{$icon-url}.png");
+  }
+}

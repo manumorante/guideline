@@ -1,0 +1,17 @@
+// Prefix
+//
+// Use @include prefix(appearance, none)
+
+@mixin prefix($prop, $value) {
+  -webkit-#{$prop}: $value;
+  -moz-#{$prop}: $value;
+  -ms-#{$prop}: $value;
+  #{$prop}: $value;
+}
+
+@mixin prefix-values($prop, $value) {
+  @each $prefix in webkit, moz, ms {
+    #{$prop}: -#{$prefix}-#{$value};
+  }
+  #{$prop}: #{$value};
+}

@@ -1,0 +1,16 @@
+// Tables
+
+@mixin table {
+  @include border-box;
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  border-collapse: collapse;
+  border: 0;
+}
+
+@mixin cell {
+  display: table-cell;
+}

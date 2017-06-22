@@ -1,0 +1,18 @@
+// Site 1 Desktop
+
+$skin: site1 desktop;
+
+// Unique Brand vars
+@import 'ui/vars.site1.brand';
+
+// default
+@import '../../src/vars.styles_guide';
+
+// Site mapping
+@import 'ui/vars.site1';
+
+// Site Desktop variation
+@import 'ui/vars.site1.desktop';
+
+// Core
+@import '../../src/manifest.styles_guide';

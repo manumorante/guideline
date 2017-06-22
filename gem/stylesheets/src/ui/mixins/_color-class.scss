@@ -1,0 +1,19 @@
+// Color class helper
+//
+// This is a StylesGuide-Make series to generate helper classes
+// 1. Helper (normally) uses !important
+
+// scss-lint:disable ImportantRule
+
+@mixin make-color-helper($name, $value) {
+
+  // Color text
+  .text-#{$name} {
+    color: $value !important; // 1
+  }
+
+  // Set background color
+  .bg-#{$name} {
+    background-color: $value !important; // 1
+  }
+}

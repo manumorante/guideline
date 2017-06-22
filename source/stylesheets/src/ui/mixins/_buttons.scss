@@ -1,0 +1,74 @@
+// Buttons
+//
+// 1. Text must always be shown in ALL CAPITAL LETTERS
+// http://1vu5su.axshare.com/#p=buttons
+
+// Main Button Colours
+$button-default-color: $color-grey-dark !default;
+$button-primary-color: $color-light !default;
+$button-secondary-color: $color-light !default;
+$button-info-color: $color-light !default;
+$button-warning-color: $color-light !default;
+$button-danger-color: $color-light !default;
+
+// Alternative Button Colours
+$button-alternative-default-color: $color-grey-dark !default;
+$button-alternative-primary-color: $color-primary !default;
+$button-alternative-secondary-color: $color-secondary !default;
+$button-alternative-info-color: $color-secondary !default;
+$button-alternative-warning-color: $color-warning !default;
+$button-alternative-danger-color: $color-danger !default;
+
+$button-height: 40px !default;
+$button-min-width: 100px !default;
+
+@mixin button {
+  @include reset-inputs;
+  @include border-box;
+  display: inline-block;
+  width: auto;
+  height: $button-height;
+  margin: 0 0 $margin-normal;
+  min-width: $button-min-width;
+  padding: 12px 10px;
+
+  border: 0;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+
+  @include font-size($font-size-base);
+  font-family: $font-family;
+  font-weight: bold;
+  text-transform: uppercase; // 1
+  letter-spacing: 1px;
+  background-color: transparent;
+}
+
+
+// Buttons variations
+@mixin button-variant($color, $background, $border) {
+  &,
+  &.active {
+    background-color: $background;
+    color: $color;
+    border: 1px solid $border;
+
+    @include hover {
+      cursor: pointer;
+      border-color: lighten($border, $variation-percent);
+      background-color: lighten($background, $variation-percent);
+    }
+  }
+
+  // Disabled
+  &.disabled,
+  &:disabled {
+    background-color: $background;
+    color: $color;
+    opacity: $opacity;
+    cursor: default;
+    pointer-events: none;
+    @include box-shadow(none);
+  }
+}

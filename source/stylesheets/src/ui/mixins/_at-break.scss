@@ -1,0 +1,53 @@
+// At Break v1.4
+// Manu Morante @unavezfui
+// Last update: 16/04/2015
+// http://github.com/manumorante/sass.at-break/
+//
+// Usage
+//
+// .col {
+//  width: 100%;
+//  @include at-small { width: 50%; }
+// }
+
+// scss-lint:disable SpaceBeforeBrace
+
+// Breakpoints
+$at-break-xsmall: $container-xs-width !default;
+$at-break-small:  $container-sm-width !default;
+$at-break-medium: $container-md-width !default;
+$at-break-large:  $container-lg-width !default;
+
+@mixin at-break($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin at-break-only($breakpoint) {
+  @if $breakpoint == $at-break-xsmall {
+    @media (max-width: $at-break-small - 1px) { @content }
+
+  } @else if $breakpoint == $at-break-small {
+    @media (min-width: $at-break-small) and (max-width: $at-break-medium - 1px) { @content }
+
+  } @else if $breakpoint == $at-break-medium {
+    @media (min-width: $at-break-medium) and (max-width: $at-break-large - 1px) { @content }
+
+  } @else if $breakpoint == $at-break-large {
+    @media (min-width: $at-break-large) { @content }
+  }
+}
+
+// Horizontal
+@mixin at-xsmall  { @include at-break($at-break-xsmall) { @content }}
+@mixin at-small   { @include at-break($at-break-small)  { @content }}
+@mixin at-medium  { @include at-break($at-break-medium) { @content }}
+@mixin at-large   { @include at-break($at-break-large)  { @content }}
+
+
+// Only
+@mixin at-xsmall-only { @include at-break-only($at-break-xsmall)  { @content }}
+@mixin at-small-only  { @include at-break-only($at-break-small)   { @content }}
+@mixin at-medium-only { @include at-break-only($at-break-medium)  { @content }}
+@mixin at-large-only  { @include at-break-only($at-break-large)   { @content }}

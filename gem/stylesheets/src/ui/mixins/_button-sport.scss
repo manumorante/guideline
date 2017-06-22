@@ -1,0 +1,72 @@
+// Button Sport
+//
+// Use <button class="button-sport"></button>
+
+$button-sport-width: 50px !default;
+$button-sport-height: 24px !default;
+$button-sport-margin: 0 !default;
+$button-sport-padding: 0 $margin-smallest !default;
+$button-sport-border-color: $color-grey-dark !default;
+$button-sport-bg-color: $color-grey-lighter !default;
+$button-sport-bg-color-hover: $color-secondary !default;
+$button-sport-bg-color-active: $color-secondary !default;
+
+@mixin button-sport(
+  $width: $button-sport-width,
+  $height: $button-sport-height,
+  $margin: $button-sport-margin,
+  $padding: $button-sport-padding,
+  $bg-color: $button-sport-bg-color,
+  $bg-color-hover: $button-sport-bg-color-hover,
+  $bg-color-active: $button-sport-bg-color-active,
+  $border-color: $button-sport-border-color
+) {
+
+  @include reset-inputs;
+  @include border-box;
+
+  display: inline-block;
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+
+  border: 0;
+  border-bottom: 2px solid $border-color;
+  outline: 0;
+
+  font-size: $font-size-base;
+  line-height: $height - 2;
+  text-align: center;
+  font-family: $font-family;
+  font-weight: bold;
+  background-color: $bg-color;
+
+  @include hover {
+    cursor: pointer;
+  }
+
+  // Hover
+  &:not(.active) {
+    @include hover {
+      opacity: .5;
+      background-color: $bg-color-hover;
+      color: $color-light;
+    }
+  }
+
+  // Active
+  @at-root .highlight_bet &, // scss-lint:disable SelectorFormat
+  &.active {
+    background-color: $bg-color-active;
+    color: $color-light;
+    opacity: 1;
+  }
+
+  // Disabled
+  &.disabled {
+    pointer-events: none;
+    opacity: $opacity;
+    cursor: default;
+  }
+}

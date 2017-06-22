@@ -1,0 +1,38 @@
+// Text
+
+$style-guide-text-color: #4078c0 !default;
+$style-guide-font-family: 'Ubuntu Mono', Consolas, 'Courier New', monospace !default;
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $style-guide-font-family;
+}
+
+// Code
+code,
+.code {
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: $sg-font-size-lg;
+  white-space: pre;
+  color: $sg-color-grey-darkest;
+  background-color: $sg-color-grey-lighter;
+  @include border-radius(4px);
+}
+
+hr {
+  @include hr;
+}
+
+a {
+  color: $style-guide-text-color;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+// Paragraph
+p {
+  //margin: 0 0 $sg-margin-normal; // Disabled to detect problems in real the project
+}

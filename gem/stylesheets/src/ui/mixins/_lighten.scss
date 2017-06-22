@@ -1,0 +1,9 @@
+// Lighten
+
+@function lighten($color, $amount) {
+  @if ($config-backward) {
+    @return $color;
+  } @else {
+    @return lighten($color, $amount);
+  }
+}

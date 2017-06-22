@@ -1,0 +1,81 @@
+// Guide Style Example block
+
+.example {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 (-$sg-margin-normal) $sg-margin-normal;
+  padding: $sg-margin-biggest $sg-margin-normal $sg-margin-normal;
+  border: 1px solid $sg-color-grey-lighter;
+
+  // scss-lint:disable ColorVariable
+  @include box-shadow(inset 0 3px 6px rgba(0, 0, 0, .05));
+  @include clearfix;
+
+  @include at-medium {
+    @include border-radius($sg-border-radius);
+  }
+}
+
+// Set margin to orphan P tag into example
+.example > p {
+  margin-bottom: $sg-margin-normal;
+}
+
+.example::before {
+  position: absolute;
+  top: $sg-margin-normal;
+  left: $sg-margin-normal;
+
+  font-size: $sg-font-size-base;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $sg-color-grey-dark;
+  text-transform: uppercase;
+  content: 'Example';
+}
+
+.example.grouped {
+  &::before {
+    display: none;
+  }
+
+  padding: $sg-margin-normal;
+  margin-top: -20px;
+
+  @include border-radius(0 0 $sg-border-radius $sg-border-radius);
+}
+
+.example.dark {
+  background-color: $sg-color-grey-lighter;
+  border-color: $sg-color-grey-lighter;
+}
+
+.example.darkest {
+  color: $sg-color-light;
+  background-color: $sg-color-dark;
+  border-color: $sg-color-dark;
+
+  &::before {
+    color: $sg-color-light;
+  }
+}
+
+.example.secondary {
+  color: $sg-color-light;
+  background-color: $sg-color-secondary;
+  border-color: $sg-color-secondary;
+
+  &::before {
+    color: $sg-color-light;
+  }
+}
+
+.example.brand {
+  padding: $sg-margin-normal;
+  border: 40px solid #262d38;
+
+  &::before {
+    display: none;
+  }
+}

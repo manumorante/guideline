@@ -1,0 +1,131 @@
+# Default application configuration that all configurations inherit from.
+
+# Default configuration yml file:
+# https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md
+
+scss_files: "app/assets/stylesheets/**/*.scss"
+
+linters:
+  BemDepth:
+    enabled: true
+    max_elements: 1
+
+  DeclarationOrder:
+    enabled: false
+
+  DuplicateProperty:
+    enabled: true
+    ignore_consecutive: true
+
+  HexLength:
+    enabled: false
+    style: long # or 'short'
+
+  HexNotation:
+    enabled: false
+    style: lowercase # or 'uppercase'
+
+  HexValidation:
+    enabled: true
+
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 2
+
+  LeadingZero:
+    enabled: true
+    style: exclude_zero # or 'include_zero'
+
+  LengthVariable:
+    enable: true
+    allowed_properties:
+      - text-shadow
+      - box-shadow
+
+  MergeableSelector:
+    enabled: true
+    force_nesting: false
+
+  PropertySortOrder:
+    enabled: true
+    ignore_unspecified: true
+    min_properties: 3
+    separate_groups: false
+    order:
+      # position
+      - position
+      - top
+      - right
+      - bottom
+      - left
+
+      # visibility
+      - visibility
+      - opacity
+      - z-index
+
+      # display
+      - display
+      - box-sizing
+      - flex
+
+      # width
+      - width
+      - max-width
+      - min-width
+
+      # height
+      - height
+      - max-height
+      - min-height
+
+      - margin
+      - padding
+
+      - border
+      - background
+      - vertical-align
+      - text-align
+
+      # font
+      - font
+      - font-family
+      - font-size
+      - font-weight
+
+      - line-height
+      - color
+
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
+    disabled_properties: []
+
+  PropertyUnits:
+    enabled: true
+    global: ['px', '%', 'deg', 'ms', 's']
+    properties: {}
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM # 'hyphenated_lowercase', 'strict_BEM', 'hyphenated_BEM', 'snake_case', 'camel_case', or a regex pattern
+
+  SpaceAfterVariableColon:
+    enabled: true
+    style: at_least_one_space # 'one_space', 'no_space', 'at_least_one_space' or 'one_space_or_newline'
+
+  SpaceBeforeBrace:
+    enabled: true
+    style: space # or 'new_line'
+    allow_single_line_padding: true
+
+  TransitionAll:
+    enabled: true
+
+  VariableForProperty:
+    enabled: true
+    properties: # Note that values like currentColor, inherit, and transparent will not be reported
+      - color
+      - font

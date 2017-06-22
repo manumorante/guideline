@@ -1,0 +1,42 @@
+// Grid
+// Create a simple grid using StylesGuide Grid Mixins
+
+// Container
+.container {
+  width: auto;
+  max-width: $sg-container-md-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $sg-margin-normal;
+  padding-left: $sg-margin-normal;
+
+  @include border-box;
+  @include clearfix;
+
+  @include at-small { width: $sg-container-sm-width; }
+  @include at-medium { width: $sg-container-md-width; }
+}
+
+.row {
+  margin-right: -$sg-margin-normal;
+  margin-left: -$sg-margin-normal;
+  @include border-box;
+  @include clearfix;
+}
+
+.col {
+  float: none;
+  width: 100%;
+  min-height: 1px;
+  padding-right: $sg-margin-normal;
+  padding-left: $sg-margin-normal;
+
+  @include border-box;
+  @include at-medium { float: left; }
+}
+
+@include at-medium {
+  @for $i from 1 through 12 {
+    .col-#{$i} { width: (100% / 12) * $i; }
+  }
+}

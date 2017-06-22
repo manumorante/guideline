@@ -1,0 +1,22 @@
+// Button Card - Multiline
+//
+// Use
+// <button class="button-card multiline">
+//   <strong>Title</strong><br>
+//   Second line
+// </button>
+
+.button-card.multiline {
+  line-height: 14px;
+  color: $color-grey;
+
+  strong {
+    line-height: 14px;
+    color: $color-grey-dark;
+  }
+
+  .icon {
+    margin-top: -14px;
+  }
+
+}

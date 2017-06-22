@@ -1,0 +1,28 @@
+// Font Size & line-height
+//
+// Get the global font size and line-height for 1-6 headers
+//
+// Use
+// .title {
+//   @include font-size($font-size-h5);
+// }
+//
+// Out
+// .title {
+//   font-size: 12px;
+//   line-height: 15px;
+// }
+
+// Use this to get the proper result according to the font-size
+@function line-height($size) {
+  @return ceil($size * $line-height-base);
+}
+
+// Write a font-size and baseline-compatible line-height.
+@mixin font-size(
+  $size,
+  $height: line-height($size)) {
+
+  font-size: $size;
+  line-height: $height;
+}

@@ -1,0 +1,9 @@
+// Config
+// scss-lint:disable PropertySpelling
+
+$skin: 'not defined' !default;
+
+.config {
+  version: 0 0 12;
+  skin: $skin;
+}

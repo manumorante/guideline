@@ -1,0 +1,32 @@
+// Close button
+//
+// 1. Additional for button version
+
+$close-button-bg: 'close-grey-dark.png' !default;
+
+@mixin close-button($bg: $close-button-bg) {
+
+  width: $icon-size;
+  height: $icon-size;
+  @include reset-inputs; // 1
+  padding: 0; // 1
+  outline: 0;
+
+  background-color: transparent;
+  background-image: image-url($bg);
+  background-size: $icon-size;
+
+  border: 0; // 1
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  // Position
+  &.is-pos-t-r {
+    position: absolute;
+    top: $margin-normal;
+    right: $margin-normal;
+  }
+}

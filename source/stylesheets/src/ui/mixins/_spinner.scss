@@ -1,0 +1,40 @@
+// Spinner
+//
+// We use a grey hidden spinner by default.
+// You have to use '.loading' class to show it.
+//
+// Use
+// <div class="spinner loading"></div>
+// or
+// <button>Submit <span class="spinner loading"></span></button>
+
+$spinner-width: $icon-size !default;
+$spinner-height: $icon-size !default;
+
+@mixin spinner (
+  $width: $spinner-width,
+  $height: $spinner-height) {
+
+  @include icon;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background-image: image-url("#{$assets-path}/spinner.svg");
+
+  // Visibility
+  @at-root .loading > &,
+  &.loading {
+    opacity: 1;
+    width: $spinner-width;
+    height: $spinner-height;
+  }
+}
+
+@mixin make-spinner($props) {
+  $class-name: nth($props, 1);
+  $icon-url: nth($props, 2);
+
+  .spinner.is-#{$class-name} {
+    background-image: image-url("#{$assets-path}/#{$icon-url}.svg");
+  }
+}

@@ -1,0 +1,29 @@
+# ###############################################
+# Front-end ignore rules
+# Manu Morante // April 20, 2014 // Updated March 9, 2017
+# https://gist.github.com/manumorante/6bc9e39ce86fd15ba007
+# ###############################################
+
+### Your ignore rules
+
+### Sass
+.sass-cache/
+.sass-cache/*
+*.css.map
+
+### Frameworks
+.idea/
+*.sublime-workspace
+*.sublime-project
+node_modules/
+
+
+### OS X cache
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+
+### Windows image file caches
+Thumbs.db
+ehthumbs.db

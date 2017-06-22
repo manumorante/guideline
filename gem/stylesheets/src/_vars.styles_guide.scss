@@ -1,0 +1,144 @@
+// - Variables
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the StylesGuide defaults without modifying key, versioned files.
+
+
+// CONFIG
+
+// To use IE6-9 versions
+$ie-old: false !default;
+
+// Backward compatibility
+$config-backward: false !default;
+
+
+// Define if we are on desktop devices to keep
+// in mind Firefox and other desktop browsers.
+//
+// Note: all styles are for mobile then It could have
+// variations for desktop.
+$is-desktop: false !default;
+
+
+// Assets path
+// To use images stored in styles_guide gem
+$assets-path: 'styles_guide' !default;
+
+
+// FONTS
+
+// Fonts families
+$font-family: 'LatoLatin', 'Lato', Arial, sans-serif !default;
+$headings-font-weight: bold !default;
+$text-align: left !default;
+
+$font-size-base: 12px !default;
+$font-size-lg: 14px !default;
+$font-size-sm: 10px !default;
+$font-size-xs: 8px !default;
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.2 !default;
+
+$font-size-h1: 26px !default;
+$font-size-h2: 22px !default;
+$font-size-h3: 18px !default;
+$font-size-h4: 16px !default;
+$font-size-h5: 14px !default;
+$font-size-h6: 12px !default;
+
+
+// COLORS
+
+// Basics
+$color-light: #fff !default; // White
+$color-dark: #000 !default; // Black. Use $color-grey-darkest for dark text.
+
+// Brand
+$color-brand: #2babda !default;
+
+// Primary
+$color-primary-light:   #04be5b !default;
+$color-primary:         #02b053 !default;
+$color-primary-dark:    #10974f !default;
+$color-primary-darkest: #028f43 !default;
+
+// Secondary
+$color-secondary-light:   #4bbde7 !default;
+$color-secondary:         $color-brand !default;
+$color-secondary-dark:    #2c9dc7 !default;
+$color-secondary-darkest: #2f7893 !default;
+
+// Info
+$color-info: $color-secondary !default;
+
+// Warning
+$color-warning: #ff9948 !default;
+
+// Error
+$color-danger: #d93b59 !default;
+$color-error: $color-danger !default;
+
+// Alpha dark/light (modal window background)
+$alpha-dark: rgba(0, 0, 0, .5) !default;
+$alpha-light: rgba(255, 255, 255, .5) !default;
+
+// Grey (for background and general)
+$color-grey-lighter:  #ebeef3 !default;  // Global body background, ...
+$color-grey-light:    #bdc1c6 !default;  // Separator, ...
+$color-grey:          #9b9b9b !default;  // Secondary text, ...
+$color-grey-dark:     #5a5e64 !default;  // Default text, ...
+$color-grey-darkest:  #262d34 !default;  // Titles, bolds, ...
+
+
+// LAYOUT
+
+// Container width
+$container-xs-width: 480px !default;    // Extra Small devices
+$container-sm-width: 768px !default;    // Small devices
+$container-md-width: 973px !default;    // Medium devices
+$container-lg-width: 1216px !default;   // Large devices
+
+
+// Spacings
+$margin-smallest: 5px !default;
+$margin-small:    8px !default;
+$margin-normal:   16px !default;
+$margin-big:      24px !default;
+$margin-bigger:   32px !default;
+$margin-biggest:  48px !default;
+
+
+// Container Left/Right padding
+$container-padding: $margin-normal !default;
+
+
+// Border radius
+$border-radius: 5px !default;
+$border-radius-big: 10px !default;
+
+
+// Icons general size (width and height)
+$icon-size: 16px !default;
+
+
+// General Opacity
+$opacity: .5 !default;
+
+
+// Box Shadow default props
+// - Horizontal offset
+// - Vertical offset
+// - Blur distance
+// - Size shadow
+// - Color
+// - Inset/Outset
+$box-shadow: 0 2px 3px 0 $color-grey !default;
+
+
+// Default variation percentage to use with darken(), lighten(), etc.
+$variation-percent: 4% !default;

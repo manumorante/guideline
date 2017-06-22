@@ -1,0 +1,23 @@
+// Spinner
+
+$spinner: true !default;
+
+@if ($spinner) {
+
+  .spinner {
+    @include spinner;
+  }
+
+  // Primary
+  $spinner-primary: primary, spinner-primary !default;
+  @include make-spinner($spinner-primary);
+
+  // Secondary
+  $spinner-secondary: secondary, spinner-secondary !default;
+  @include make-spinner($spinner-secondary);
+
+  // Light color
+  $spinner-light: light, spinner-white !default;
+  @include make-spinner($spinner-light);
+
+}

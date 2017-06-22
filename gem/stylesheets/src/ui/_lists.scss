@@ -1,0 +1,13 @@
+// Lists
+//
+// Use
+// <ul class="list">
+//   <li>Item</li>
+//   <li>Item</li>
+// </ul>
+
+$list-margin: 0 0 $margin-normal !default;
+
+.list {
+  @include reset-list($margin: $list-margin);
+}

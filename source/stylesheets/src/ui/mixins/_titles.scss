@@ -1,0 +1,25 @@
+// Subtitle
+
+$subtitle-margin-bottom: $margin-small !default;
+$subtitle-margin-left: $margin-small !default;
+$subtitle-font-size: $font-size-lg !default;
+$subtitle-line-height: null !default;
+$subtitle-color: $color-grey-darkest !default;
+$subtitle-text-align: $text-align !default;
+
+@mixin subtitle (
+  $margin-bottom: $subtitle-margin-bottom,
+  $margin-left: $subtitle-margin-left,
+  $font-size: $subtitle-font-size,
+  $line-height: $subtitle-line-height,
+  $color: $subtitle-color,
+  $text-align: $subtitle-text-align) {
+
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+
+  text-align: $text-align;
+  @include font-size($font-size);
+  font-weight: normal;
+  color: $subtitle-color;
+}

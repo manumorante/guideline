@@ -1,0 +1,9 @@
+// Subtitle
+
+$subtitle: true !default;
+
+@if ($subtitle) {
+  .subtitle {
+    @include subtitle;
+  }
+}

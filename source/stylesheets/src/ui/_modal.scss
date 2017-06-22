@@ -1,0 +1,33 @@
+// - Modal
+//
+// Use example
+// <div class='modal is-success'>
+//  <h3 class='modal__title'>Success Modal Title</h3>
+//  <p>Praesent tempor, nunc posuere sodales feugiat.</p>
+// </div>
+
+$modal: true !default;
+
+@if ($modal) {
+
+  .modal {
+    @include modal;
+  }
+
+  // Success
+  $modal-success: $color-primary !default;
+  @include make-modal(success, $modal-success);
+
+  // Info
+  $modal-info: $color-info !default;
+  @include make-modal(info, $color-info);
+
+  // Warning
+  $modal-warning: $color-warning !default;
+  @include make-modal(warning, $color-warning);
+
+  // Danger
+  $modal-danger: $color-danger !default;
+  @include make-modal(danger, $color-danger);
+
+}

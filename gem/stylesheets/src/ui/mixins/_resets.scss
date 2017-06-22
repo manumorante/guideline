@@ -1,0 +1,40 @@
+// Reset (Normalize)
+//
+// This is not a reset, this is a normalizing based on Necolas's Normalize with the StylesGuide Variables.
+// https://necolas.github.io/normalize.css/
+
+@mixin reset-inputs {
+  @include border-radius(0);
+  @include prefix(appearance, none);
+}
+
+// Reset List
+@mixin reset-list(
+  $margin: 0,
+  $padding: 0) {
+
+  margin: $margin;
+  padding: $padding;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Reset Definition List
+@mixin reset-d-list(
+  $margin: 0,
+  $padding: 0) {
+
+  margin: $margin;
+  padding: $padding;
+  list-style: none;
+
+  dt,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+}

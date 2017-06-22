@@ -1,0 +1,35 @@
+// Definition list group
+//
+// Use
+// <div class="d-list-group">
+//  <dl>
+//    <dt>Term</dt>
+//    <dd>Description</dd>
+//  </dl>
+//
+//  <dl>
+//    <dt>Term</dt>
+//    <dd>Description</dd>
+//  </dl>
+// </div>
+
+.d-list-group {
+  display: table;
+  width: 100%;
+  margin-bottom: $margin-normal;
+
+  .d-list {
+    display: table-row;
+    width: 100%;
+    margin-bottom: $margin-small;
+  }
+
+  dt,
+  dd {
+    padding-bottom: $margin-small;
+  }
+
+  > dl {
+    margin-bottom: 0;
+  }
+}

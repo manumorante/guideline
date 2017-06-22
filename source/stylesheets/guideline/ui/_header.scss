@@ -1,0 +1,47 @@
+// Header
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  margin-bottom: $sg-margin-normal;
+  padding: half($sg-margin-big) $sg-margin-normal;
+
+  @include box-shadow(0 2px 4px rgba(0, 0, 0, .05)); // scss-lint:disable ColorVariable
+  border-top: 1px solid $sg-color-grey-lighter;
+  border-bottom: 1px solid $sg-color-grey-light;
+  background-color: $sg-color-grey-lighter;
+}
+
+// Site logo
+.site-logo {
+  display: inline-block;
+  display: none;
+  width: 125px;
+  height: 18px;
+  margin-right: $sg-margin-normal;
+  overflow: hidden;
+
+  img {
+    width: 125px;
+    height: 18px;
+  }
+}
+
+// Site title
+.site-title {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 100;
+  color: $sg-color-grey;
+}
+
+// Site selector
+.site-selector {
+  float: right;
+}
+

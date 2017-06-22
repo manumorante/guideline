@@ -1,0 +1,6 @@
+// Card Header
+// @extends card
+
+.card__header {
+  @include card-header;
+}

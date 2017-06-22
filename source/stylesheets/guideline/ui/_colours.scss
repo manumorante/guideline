@@ -1,0 +1,27 @@
+//
+// Colours
+//
+
+.color-block {
+  display: block;
+  float: left;
+  width: 33.33333%;
+  margin: 0 0 $sg-margin-small;
+
+  text-align: center;
+
+  @include at-medium {
+    display: inline-block;
+    width: auto;
+    margin-right: $sg-margin-normal;
+  }
+}
+
+.color-block__circle {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto $sg-margin-small;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}

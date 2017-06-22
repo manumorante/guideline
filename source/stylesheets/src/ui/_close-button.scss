@@ -1,0 +1,11 @@
+// Close button
+//
+// Use <button class="close-button">&times;</button>
+
+$close-button: true !default;
+
+@if ($close-button) {
+  .close-button {
+    @include close-button;
+  }
+}

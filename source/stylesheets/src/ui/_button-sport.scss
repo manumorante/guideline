@@ -1,0 +1,13 @@
+// Button Sport
+//
+// Use <button class="button-sport"></button>
+
+$button-sport: true !default;
+
+@if ($button-sport) {
+
+  .button-sport {
+    @include button-sport;
+  }
+
+}

@@ -1,0 +1,20 @@
+// HR
+
+$hr-height: 1px !default;
+$hr-margin: 0 0 $margin-normal !default;
+$hr-color: $color-grey-light !default;
+
+@mixin hr {
+  margin: $hr-margin;
+  border: 0;
+  height: 0;
+  border-bottom: $hr-height solid $hr-color;
+
+  // Full width
+  &.is-full {
+    @if($container-padding > 0) {
+      margin-left: -$container-padding;
+      margin-right: -$container-padding;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+// Half
+
+@function half($value) {
+  @return $value / 2;
+}

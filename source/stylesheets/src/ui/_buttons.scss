@@ -1,0 +1,74 @@
+// Buttons
+//
+// Use <button class="button is-default"></button>
+
+.button {
+  @include button;
+
+  // Button - Default
+  $button-default-color: $color-grey-dark !default;
+  $button-default-bg: $color-grey-lighter !default;
+  $button-default-border: $color-grey-lighter !default;
+
+  &.is-default {
+    @include button-variant($button-default-color, $color-grey-lighter, $color-grey-lighter);
+  }
+
+  // Button - Primary
+  $button-primary-color: $color-light !default;
+  $button-primary-bg: $color-primary !default;
+  $button-primary-border: $color-primary !default;
+
+  &.is-primary {
+    @include button-variant($button-primary-color, $color-primary, $color-primary)
+  }
+
+
+  // Button - Secondary
+  $button-secondary-color: $color-light !default;
+  $button-secondary-bg: $color-secondary !default;
+  $button-secondary-border: $color-secondary !default;
+
+  &.is-secondary {
+    @include button-variant($button-secondary-color, $color-secondary, $color-secondary)
+  }
+
+
+  // Button - Success
+  $button-success-color: $color-light !default;
+  $button-success-bg: $color-success !default;
+  $button-success-border: $color-success !default;
+
+  &.is-success {
+    @include button-variant($button-success-color, $button-success-bg, $button-success-border);
+  }
+
+
+  // Button - Info
+  $button-info-color: $color-light !default;
+  $button-info-bg: $color-info !default;
+  $button-info-border: $color-info !default;
+
+  &.is-info {
+    @include button-variant($button-info-color, $color-info, $color-info)
+  }
+
+  // Button - Warning
+  $button-warning-color: $color-light !default;
+  $button-warning-bg: $color-warning !default;
+  $button-warning-border: $color-warning !default;
+
+  &.is-warning {
+    @include button-variant($button-warning-color, $color-warning, $color-warning)
+  }
+
+
+  // Button - Danger
+  $button-danger-color: $color-light !default;
+  $button-danger-bg: $color-danger !default;
+  $button-danger-border: $color-danger !default;
+
+  &.is-danger {
+    @include button-variant($button-danger-color, $color-danger, $color-danger)
+  }
+}

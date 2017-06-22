@@ -1,0 +1,13 @@
+// Button Card
+//
+// Use <button class="button-card"></button>
+
+$button-card: true !default;
+
+@if ($button-card) {
+
+  .button-card {
+    @include button-card;
+  }
+
+}

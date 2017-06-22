@@ -1,0 +1,9 @@
+// Hover
+
+@mixin hover {
+  @include at-small {
+    &:hover {
+      @content;
+    }
+  }
+}

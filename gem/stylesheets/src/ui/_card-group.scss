@@ -1,0 +1,25 @@
+// Cards Group
+//
+// 1. Restore default margin in the last card
+//
+// Use
+// <div class="cards-group">
+//   <div class="card">...</div>
+//   ...
+// </div>
+
+.cards-group > .card {
+  margin-bottom: $margin-small;
+
+  .card:last-child {
+    margin-bottom: $margin-normal; // 1
+  }
+}
+
+// In a group as modifier
+//
+// Use  <div class="card is-in-group">...</div>
+
+.card.is-in-group {
+  margin-bottom: $margin-small;
+}

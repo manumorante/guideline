@@ -1,0 +1,9 @@
+// Box sizing -- Border box / Content box
+
+@mixin border-box {
+  @include prefix(box-sizing, border-box);
+}
+
+@mixin border-content {
+  @include prefix(box-sizing, content-box);
+}
